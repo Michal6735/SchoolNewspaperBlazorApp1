@@ -1,6 +1,8 @@
 ﻿@page "/login"
 @using SchoolNewspaperBlazorApp.Interfaces.Service
 @rendermode InteractiveServer
+@inject IJSRuntime JS;
+@inject NavigationManager nav 
 <PageTitle>Logowanie | Gazetka ETI</PageTitle>
 
 <div class="login-page">
@@ -164,7 +166,9 @@
         if(succces)
         {
             errorMessage = "Udało się zalogować!";
-            isBusy = false;
+			// await JS.InvokeVoidAsync("sessionStorage.setItem", "loggedUser", Email);
+   //          isBusy = false;
+   //          nav.NavigateTo("/adminPanel");
 
         }
         else

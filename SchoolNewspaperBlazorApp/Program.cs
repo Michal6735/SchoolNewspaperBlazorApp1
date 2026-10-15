@@ -49,7 +49,8 @@ namespace SchoolNewspaperBlazorApp
             app.UseStaticFiles();
             app.UseStaticFiles(new StaticFileOptions
             {
-                FileProvider = new PhysicalFileProvider(imagesPath),
+                FileProvider = new PhysicalFileProvider(
+                    @"C:\Users\Uczeñ2026\source\repos\SchoolNewspaperBlazorApp\Images"),
                 RequestPath = "/Images"
             });
 
